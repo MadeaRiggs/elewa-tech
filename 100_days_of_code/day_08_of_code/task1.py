@@ -24,7 +24,10 @@ neg_p= not p
 c= neg_q and neg_p
 # print("c is ", c) #False
 
-answer2 = b and (not c)
+#**********EITHER
+# answer2 = b and (not c)
+#*************OR
+answer2 = b; (not c)
 print("answer 2 is ", answer2) 
 
 #3) (p ∨ q) ∧ (p or  ¬ q)
