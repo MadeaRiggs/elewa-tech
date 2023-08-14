@@ -1,30 +1,41 @@
 # 1) Write a python Program to prompt the user to create a shopping list and calculate the total cost
-# milk= int(input("Milk packets are "))
-# flour= int(input("Flour packets are "))
-# oil= int(input("Cooking oil bottles are "))
+milk= int(input("Milk packets are "))
+flour= int(input("Flour packets are "))
+oil= int(input("Cooking oil bottles are "))
 
-# milk_cost= float(input("The cost of milk is "))
-# flour_cost= float(input("The cost of flour is "))
-# oil_cost= float(input("The cost of oil is "))
+milk_cost= float(input("The cost of milk is "))
+flour_cost= float(input("The cost of flour is "))
+oil_cost= float(input("The cost of oil is "))
 
-# total_cost= (milk * milk_cost) + (flour * flour_cost) + (oil * oil_cost)
-# print("The total shopping cost is ", total_cost)
+total_cost= (milk * milk_cost) + (flour * flour_cost) + (oil * oil_cost)
+print("The total shopping cost is ", total_cost)
 
 
 # 2) Write a python program that will prompt the user to perform the calculations of Area, surface area and volume of a cuboid
-# length = float(input("length is "))
-# width = float(input("width is "))
-# height = float(input("height is "))
+length = float(input("length is "))
+width = float(input("width is "))
+height = float(input("height is "))
 
-# # Calculate and display the results
-# area = length * width
-# print("Area of cuboid is ", area)
+# Calculate and display the results
+area = length * width
+print("Area of cuboid is ", area)
 
-# surface_area = (2 *length * width) + (2 *length * height) + (2 * height * width)
-# print("Surface area of cuboid is ", surface_area)
+surface_area = (2 *length * width) + (2 *length * height) + (2 * height * width)
+print("Surface area of cuboid is ", surface_area)
 
-# volume = length * width * height
-# print("Volume of cuboid is ", volume)
+volume = length * width * height
+print("Volume of cuboid is ", volume)
 
 
 # 3) Write a python program that will prompt the user to input their credit card information and check whether the information shared is a string or an integer
+name= input("The card holder is ")
+number= int(input("The credit card number is "))
+cvv= int(input("The security code is "))
+expire= input("The expiration date is ")
+bank= input("The bank name is ")
+
+print("The card holder is ", name, type(name))
+print("The credit card number is ", number, type(number))
+print("The cvv is ", cvv, type(cvv))
+print("The expiration date is ", expire, type(expire))
+print("The bank name is ", bank, type(bank))
