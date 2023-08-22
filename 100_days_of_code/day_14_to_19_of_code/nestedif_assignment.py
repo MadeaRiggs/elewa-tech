@@ -1,4 +1,4 @@
-##########Question 1
+# ##########Question 1
 account= "existing"
 deposit = 500
 balance = 800
@@ -84,28 +84,25 @@ else :
 
 #########Question 3
 arrival= "late"
-guests = 100
 weather = "sunny"
+time = "morning"
 
 if (weather == "sunny") :
     theme = "outdoors"
     print("Activity will be done ", theme)
-    if (guests >= 150):
-        print("Buy a large tent")
+    if (time == "morning" and arrival == "early"):
+        print("The event will start and finish early")
+        print("We will start with speeches, jam session then cake cutting")
     else :
-        print("Buy a medium tent")
-        if (arrival == "early") :
-            print("Start and finish event early")
-        else :
-            print("Start and finish event late")
+        print("Start and finish event late")
+        print("We will only do speeches then cake cutting")
+            
 else :
     theme = "indoors"
     print("Activity will be done ", theme)
-    if (guests >= 150):
-        print("Use a multipurpose hall")
+    if (time == "morning" and arrival == "early"):
+        print("The event will start and finish early")
+        print("We will start with speeches, jam session then cake cutting")
     else :
-        print("Use a normal hall")
-        if (arrival == "early") :
-            print("Start and finish event early")
-        else :
-            print("Start and finish event late")
+        print("Start and finish event late")
+        print("We will only do speeches and cake cutting")
