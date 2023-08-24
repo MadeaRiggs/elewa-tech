@@ -1,20 +1,20 @@
 #######1st While loop 
-# milk= 2
-# # milk = 10
+milk= 2
+# milk = 10
 
-# while (milk < 10) :
-#     milk = milk +1
-#     print(milk)5
+while (milk < 10) :
+    milk = milk +1
+    print(milk)
 
-#counter variable prevents excess memory space
-# counter = 5
-# budget = 13500
-# savings = 3000
+#The problem is it runs and wastes memory. This can be solved by using a counter variable or adding the budget varible
+counter = 5
+budget = 13500
+savings = 3000
 
-# while (budget < 15000 and counter <= 5) :
-#     savings = savings + 3000
-#     counter = counter + 1
-#     print(savings)
+while (budget < 15000 and counter <= 5) :
+    savings = savings + 3000
+    counter = counter + 1
+    print(savings)
 
 #########2nd While loop
 shopping_bg = 1500
