@@ -1,4 +1,4 @@
-#######1st While loop 
+######1st While loop 
 milk= 2
 # milk = 10
 
@@ -16,7 +16,7 @@ while (budget < 15000 and counter <= 5) :
     counter = counter + 1
     print(savings)
 
-#########2nd While loop
+########2nd While loop
 shopping_bg = 1500
 bananas = 0
 oranges = 0
@@ -30,3 +30,45 @@ else:
     oranges = oranges + 20
     print("The oranges are ", oranges)
     
+shower = 1
+work = 1
+laziness = 1
+interview = 1
+no_of_showers = 0
+
+while(shower == 1 and no_of_showers > 2):
+    no_of_showers = no_of_showers + 1
+    if(work == 1 and laziness == 1):
+        if(interview == 1):
+            print("Go take a shower!")
+        else:
+            print("You can decide not to take a shower")
+    else:
+        print("Shower and Stay in the house")
+
+else:
+    if(laziness == 1 and interview == 1):
+        if(shower == 1):
+            print("Go take a shower.")
+        else:
+            print("Stay untidy")
+    else:
+        print("Become a couch potato")
+
+
+
+time = "morning"
+bal = 3400
+deposit = 2500
+max
+location = "Nairobi"
+withdrwl_amt = 500
+
+while(bal <= 1000 and location == "Nairobi"):
+   if(bal < 1000):
+      bal = bal + deposit
+      print(bal)
+   elif (bal > 1000):
+      bal = bal - withdrwl_amt
+      print(bal)
+      print("You have withdrawn.")
