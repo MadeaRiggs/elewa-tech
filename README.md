@@ -7,3 +7,5 @@ day 4- Logical operations(theory)
 day 6,7 - Bit-wise operations(theory)
 
 day 13 - no code but assignment
+
+day 21 to 25 - Hackathon
