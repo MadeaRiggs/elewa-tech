@@ -1,4 +1,5 @@
 ##########INHERITANCE IN PYTHON
+#single inheritance- inheriting from 1 base class
 
 #########CASE STUDY 1
 # creating base class
