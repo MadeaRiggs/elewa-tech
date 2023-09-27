@@ -1,20 +1,19 @@
 ################# Having 3 Parent classes
 ########CASE STUDY 1: SHOPPING CENTER
 #Case Chores
-#Base Class 1
+# Base Class 1
 class House:
 
     #constructor
-    def __init__(self, grocery, electronics, toiletry, furniture):
-        self.grocery = grocery
-        self.toiletry = toiletry
-        self.electronics = electronics
-        self.furniture = furniture
+    def __init__(self):
+        self.grocery = ""
+        self.toiletry = ""
+        self.electronics = ""
+        self.furniture = ""
 
     #method 1: grocery
     def getGrocery(self):
-        groc = input("Enter the grocery to buy: ", )
-        self.grocery = groc
+        self.grocery = input("Enter the grocery to buy: ")
         return self.grocery
     
     #method 2: electronics
@@ -39,60 +38,54 @@ class House:
 class Kitchen:
 
     #Constructor
-    def __init__(self, perishable, drygrain):
-        self.perish = perishable
-        self.dry = drygrain
+    def __init__(self):
+        self.perishable = ""
+        self.drygrain = ""
 
     #method 1: Arrangement (if statement)
     def Arrange(self):
-        perish = 25
-        dry = 45
-        item = input("Enter the item: ", )
-        item_2 = input("Enter the item: ", )
         
+        item = int(input("Enter the perishable item: "))
+        item_2 = int(input("Enter the dry grain item: "))
 
-        #If statement
-        if(item <= perish):
-           self.perish = print("Store in The Fridge")
-        elif(item_2 <= dry and item_2 != perish):
-            self.dry = print("Store in the cabinet")
+        if item <= 25:
+            self.perishable = "Store in The Fridge"
+        elif item_2 <= 45:
+            self.drygrain = "Store in the cabinet"
         else:
-            print("Store it in the grocery basket")
-        
-        return (self.dry or self.perish)
+            return "Store it in the grocery basket"
+
+        return self.drygrain or self.perishable
         
 
-#Base class 3
+# Base Class 3 (LivingRoom)
 class LivingRoom:
-
-    #constructor
-    def __init__(self, entApp, DinePl):
+    def __init__(self, entApp="", DinePl=""):
         self.dine = DinePl
         self.ent = entApp
 
-    #Method 1: Where we wipe
     def DoWipe(self):
         dine = 1
         dust = 1
-        
 
-        #if statement
-        if(dine == 1):
-            self.dine = print("You need to wipe it")
-        elif(dust == 1):
-            self.ent = print("You have to dust off the appliances")
+        if dine == 1:
+            self.dine = "You need to wipe it"
+        elif dust == 1:
+            self.ent = "You have to dust off the appliances"
         else:
-            print("The living room is clean")
-        return (self.dine or self.ent)
+            return "The living room is clean"
+
+        return self.dine or self.ent or "The living room is clean"
+
 
 #Derived class
 class Activity(House, Kitchen, LivingRoom):
 
     #define the constructor
     def __init__(self):
-        House.__init__(self, " "," ", " ", " " )
-        Kitchen.__init__(self, " ", " ")
-        LivingRoom.__init__(self,  0, 1)
+        House.__init__(self)
+        Kitchen.__init__(self)
+        LivingRoom.__init__(self)
 
     #method 1
     def shopped_items(self):
@@ -103,19 +96,20 @@ class Activity(House, Kitchen, LivingRoom):
 
     #method 2
     def arrangement(self):
-        print(self.dry)
-        print(self.perish)
+        print(self.Arrange())  # Use the Arrange method from Kitchen class
 
     #method 3
     def activityDone(self):
-        print(self.dine)
-        print(self.ent)
+        print(self.DoWipe())
 
 # Creating object
 action_1 = Activity()
 
-#Call onto methods
-print(action_1.activityDone())
-    
+# #Call onto methods
+# print(action_1.activityDone())
+# Call methods
+action_1.shopped_items()
+action_1.arrangement()
+action_1.activityDone()  
 
     
