@@ -95,3 +95,4 @@ fruit_6= Fruits("Cylindrical", "yellow", 0, 0)
 #call methods
 print(fruit_1.getColor())
 print(fruit_1.getPrice())
+
