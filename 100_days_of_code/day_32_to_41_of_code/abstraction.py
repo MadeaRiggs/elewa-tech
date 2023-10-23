@@ -39,14 +39,14 @@ class Circle(Shape):
         perimeter= 3.142 * (self.radius * 2)
         print("The perimeter is: ", perimeter)
 
-    #method 1
+    #method 2
     def CArea(self):
         radius= int(input("Enter radius of circle: ", ))
         self.radius=radius
         area= 3.142 * self.radius *  self.radius
         print("The area is: ", area)
     
-    #method 1
+    #method 3
     def CFact(self):
         name_c= input("Enter the shape name : ", )
         self.name= name_c
