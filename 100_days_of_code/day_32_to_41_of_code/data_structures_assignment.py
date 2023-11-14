@@ -19,41 +19,61 @@ class Study:
 
     #method to get mood
     def getMood(self):
-        mood= input("Enter your mood (happy/sad): ").strip().lower()
-        if mood in ["happy", "sad"]:
-            self.mood= mood
-            if mood == "happy":
-                print("Listen to House music while studying")
-            else:
-                print("Listen to RnB music while studying")
-        else:
-            print("Invalid mood. Please select 'happy' or 'sad'")
+        while True:
+            try:
+                mood= input("Enter your mood (happy/sad): ").strip().lower()
+                if mood in ["happy", "sad"]:
+                    self.smood= mood
+                    if mood == "happy":
+                        print("Listen to House music while studying")
+                    else:
+                        print("Listen to RnB music while studying")
+                    break
+            except ValueError:
+                print("Invalid mood. Please select 'happy' or 'sad'")
+
         return self.smood
 
     #method to get duration
     def getDuration(self):
-        duration= int(input("Enter the number of hours you intend to study: "))
-        if duration <= 0:
-            print("Invalid duration. Please enter a positive number.")
-        elif duration > 0 and duration <= 2:
-            print("Take 20 mins of break in between the hours and drink water")
-        elif duration > 2 and duration <= 4:
-            print("Take 30 mins of break in between the hours and eat a snack")
-        else:
-            print("Take 1 hour of break in between the hours and cook a meal")
-        self.sduration= duration
+        while True:
+            try:
+                duration= int(input("Enter the number of hours you intend to study: "))
+                if duration <= 0:
+                    print("Invalid duration. Please enter a positive number.")
+                elif duration > 0 and duration <= 2:
+                    print("Take 20 mins of break in between the hours and drink water")
+                elif duration > 2 and duration <= 4:
+                    print("Take 30 mins of break in between the hours and eat a snack")
+                else:
+                    print("Take 1 hour of break in between the hours and cook a meal")
+                self.sduration= duration
+                break
+
+            except ValueError:
+                print("Invalid duration. Please enter a positive number.")
         return self.sduration
     
     #method to get deadline
     def getDeadline(self):
-        deadline= input("Enter the deadline of the activity (today/tomorrow): ").strip().lower()
-        self.sdeadline= deadline
+        while True:
+            deadline = input("Enter the deadline of the activity (today/tomorrow): ").strip().lower()
+            if deadline in ["today", "tomorrow"]:
+                self.sdeadline = deadline
+                break
+            else:
+                print("Invalid deadline. Please select 'today' or 'tomorrow'")
+    
         return self.sdeadline
 
-    #method to get topic
     def getTopic(self):
-        topic_level= input("Enter the topic level (beginner/intermediate/advanced): ").strip().lower()
-        self.stopic_level= topic_level
+        while True:
+            topic_level= input("Enter the topic level (beginner/intermediate/advanced): ").strip().lower()
+            if topic_level in ["beginner", "intermediate", "advanced"]:
+                self.stopic_level= topic_level
+                break
+            else:
+                print("Invalid topic level. Please select 'beginner' or 'intermediate' or 'advanced'")
         
         return self.stopic_level
     
