@@ -81,7 +81,7 @@ class name(Electric_shop):
     def __init__(self, pd_name, quantity, price) :
         self.sname= pd_name
         self.squantity= quantity
-        self.qprice= price
+        self.sprice= price
 
     #method 1
     def getName(self):
