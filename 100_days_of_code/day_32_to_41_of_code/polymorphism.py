@@ -20,7 +20,7 @@ class circle:
 #Form 1: Cylindar pi r2h
 class cylindar(circle):
 
-    #Form
+    #Form 1: Cylindar pi r2h
     def render(self):
 
         height = int(input("Enter the height: ", ))
@@ -30,7 +30,7 @@ class cylindar(circle):
 #Form 2: Sphere SA = 4/3PIR3
 class sphere(circle):
 
-    #method
+    #Form 2: Sphere SA = 4/3PIR3
     def render(self):    
         surface = 4/3 * self.radius *self.radius *self.radius * self.pi
         print("The Surface area is: ", surface)
